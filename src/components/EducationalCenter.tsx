@@ -130,7 +130,7 @@ export const EducationalCenter: React.FC = () => {
       <div className="flex bg-gray-100 p-1 rounded-xl w-fit mx-auto border border-gray-200">
         <button
           onClick={() => setActiveTab("quiz")}
-          className={`px-6 py-2 rounded-lg text-sm cursor-pointer font-bold tracking-wide transition-all ${
+          className={`px-6 cursor-pointer py-2 rounded-lg text-sm cursor-pointer font-bold tracking-wide transition-all ${
             activeTab === "quiz"
               ? "bg-white text-slate-800 shadow-sm"
               : "text-gray-500 hover:text-gray-700"
@@ -185,7 +185,7 @@ export const EducationalCenter: React.FC = () => {
 
                 <button
                   onClick={startNewQuiz}
-                  className="w-full max-w-xs bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 mx-auto text-sm"
+                  className="w-full max-w-xs cursor-pointer bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 mx-auto text-sm"
                 >
                   <RefreshCw className="w-4 h-4" /> Restart New Test
                 </button>
@@ -248,7 +248,7 @@ export const EducationalCenter: React.FC = () => {
                           <button
                             key={option.signId}
                             onClick={() => handleOptionSelect(option.signId)}
-                            className={`w-full text-left p-4 rounded-xl border text-sm flex items-start gap-4 transition-all ${optionStyle}`}
+                            className={`w-full text-left cursor-pointer p-4 rounded-xl border text-sm flex items-start gap-4 transition-all ${optionStyle}`}
                             disabled={isAnswerSubmitted}
                           >
                             <span className="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center text-xs font-bold text-gray-500 shrink-0 select-none">
@@ -269,14 +269,14 @@ export const EducationalCenter: React.FC = () => {
                         <button
                           onClick={handleAnswerSubmit}
                           disabled={!selectedOptionId}
-                          className="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-sm"
+                          className="px-6 py-2.5 cursor-pointer bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-sm"
                         >
                           CONFIRM SUBMISSION
                         </button>
                       ) : (
                         <button
                           onClick={handleNextQuestion}
-                          className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-sm flex items-center gap-1.5"
+                          className="px-6 py-2.5 cursor-pointer bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs tracking-wider transition-all shadow-sm flex items-center gap-1.5"
                         >
                           {currentQuestionIdx + 1 === quizQuestions.length ? "Finish Test" : "Next Question"}
                         </button>
@@ -317,7 +317,7 @@ export const EducationalCenter: React.FC = () => {
                               </span>
                               <button
                                 onClick={() => speakText(quizQuestions[currentQuestionIdx].explanationEn, "en-US", "quiz_ex_en")}
-                                className="p-1 rounded-full bg-white border border-gray-100 hover:bg-gray-100 active:scale-95 transition-all text-gray-500"
+                                className="p-1 rounded-full cursor-pointer bg-white border border-gray-100 hover:bg-gray-100 active:scale-95 transition-all text-gray-500"
                               >
                                 <Volume2 className="w-3.5 h-3.5" />
                               </button>
@@ -335,7 +335,7 @@ export const EducationalCenter: React.FC = () => {
                               </span>
                               <button
                                 onClick={() => speakText(quizQuestions[currentQuestionIdx].explanationKh, "km-KH", "quiz_ex_kh")}
-                                className="p-1 rounded-full bg-white border border-gray-100 hover:bg-gray-100 active:scale-95 transition-all text-gray-500"
+                                className="p-1 cursor-pointer rounded-full bg-white border border-gray-100 hover:bg-gray-100 active:scale-95 transition-all text-gray-500"
                               >
                                 <Volume2 className="w-3.5 h-3.5" />
                               </button>
@@ -394,7 +394,7 @@ export const EducationalCenter: React.FC = () => {
                         e.stopPropagation(); // Avoid double flipping
                         speakText(activeFlashcard.nameKh, "km-KH", "flash_kh");
                       }}
-                      className="p-1 bg-slate-800 text-emerald-400 rounded-full hover:bg-slate-700 hover:text-white transition-all"
+                      className="p-1 cursor-pointer bg-slate-800 text-emerald-400 rounded-full hover:bg-slate-700 hover:text-white transition-all"
                     >
                       <Volume2 className="w-4 h-4" />
                     </button>
@@ -429,7 +429,7 @@ export const EducationalCenter: React.FC = () => {
             <div className="flex justify-between items-center w-full max-w-md mt-6">
               <button
                 onClick={prevFlashcard}
-                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg text-xs font-bold font-mono transition-all"
+                className="px-4 cursor-pointer py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg text-xs font-bold font-mono transition-all"
               >
                 PREVIOUS SIGN
               </button>
@@ -438,7 +438,7 @@ export const EducationalCenter: React.FC = () => {
               </span>
               <button
                 onClick={nextFlashcard}
-                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg text-xs font-bold font-mono transition-all"
+                className="cursor-pointer px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg text-xs font-bold font-mono transition-all"
               >
                 NEXT SIGN
               </button>
