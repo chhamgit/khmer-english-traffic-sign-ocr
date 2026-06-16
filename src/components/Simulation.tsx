@@ -346,7 +346,7 @@ export const Simulation: React.FC = () => {
                 {/* Trigger Speak manually */}
                 <button
                   onClick={() => speakSimAlert(activeSign.nameEn, activeSign.rulesEn, "en-US")}
-                  className="w-full py-2 bg-slate-100 hover:bg-slate-200 active:scale-98 transition-all flex items-center justify-center gap-1.5 text-xs font-bold text-slate-700 rounded-xl border border-slate-200"
+                  className="cursor-pointer w-full py-2 bg-slate-100 hover:bg-slate-200 active:scale-98 transition-all flex items-center justify-center gap-1.5 text-xs font-bold text-slate-700 rounded-xl border border-slate-200"
                 >
                   <Volume2 className="w-4 h-4 text-slate-500" /> Re-vocalize Audio Aid
                 </button>

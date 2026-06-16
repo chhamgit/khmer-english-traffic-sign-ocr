@@ -113,7 +113,7 @@ export const Catalog: React.FC = () => {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="text-xs text-emerald-600 hover:underline font-semibold"
+              className="text-xs cursor-pointer text-emerald-600 hover:underline font-semibold"
             >
               Clear filter
             </button>
@@ -219,7 +219,7 @@ export const Catalog: React.FC = () => {
                     </h3>
                     <button
                       onClick={() => speakWord(selectedSign.nameEn, "en-US", `inspect_en_${selectedSign.id}`)}
-                      className={`p-1.5 rounded-full transition-all ${
+                      className={`p-1.5 cursor-pointer rounded-full transition-all ${
                         speechActive === `inspect_en_${selectedSign.id}`
                           ? "bg-emerald-100 text-emerald-700 ring-2 ring-emerald-300"
                           : "bg-gray-50 hover:bg-gray-100 text-gray-500"
@@ -248,7 +248,7 @@ export const Catalog: React.FC = () => {
                       </div>
                       <button
                         onClick={() => speakWord(selectedSign.nameKh, "km-KH", `inspect_kh_${selectedSign.id}`)}
-                        className={`p-1.5 rounded-full transition-all ${
+                        className={`p-1.5 rounded-full transition-all cursor-pointer ${
                           speechActive === `inspect_kh_${selectedSign.id}`
                             ? "bg-emerald-200 text-emerald-800 ring-2 ring-emerald-400"
                             : "bg-emerald-100/60 hover:bg-emerald-100 text-emerald-700"

@@ -230,7 +230,7 @@ export const Scanner: React.FC = () => {
           {image && (
             <button
               onClick={startOver}
-              className="flex items-center gap-1 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg text-xs font-bold font-mono transition-all"
+              className="cursor-pointer flex items-center gap-1 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg text-xs font-bold font-mono transition-all"
             >
               <Trash2 className="w-3.5 h-3.5" /> Clear Image
             </button>
@@ -270,7 +270,7 @@ export const Scanner: React.FC = () => {
 
                 <button
                   onClick={triggerCamera}
-                  className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+                  className="cursor-pointer px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   <Camera className="w-3.5 h-3.5" /> Use Device Camera
                 </button>
@@ -290,13 +290,13 @@ export const Scanner: React.FC = () => {
               <div className="absolute inset-x-0 bottom-6 flex justify-center gap-3.5 z-10 px-4">
                 <button
                   onClick={capturePhoto}
-                  className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 shadow-lg text-white font-extrabold text-xs tracking-wider rounded-xl transition-all"
+                  className="cursor-pointer px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 shadow-lg text-white font-extrabold text-xs tracking-wider rounded-xl transition-all"
                 >
                   SNAP PHOTO
                 </button>
                 <button
                   onClick={stopCamera}
-                  className="px-6 py-2.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 text-slate-300 font-extrabold text-xs tracking-wider rounded-xl transition-all"
+                  className="cursor-pointer px-6 py-2.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 text-slate-300 font-extrabold text-xs tracking-wider rounded-xl transition-all"
                 >
                   CANCEL
                 </button>
@@ -314,7 +314,7 @@ export const Scanner: React.FC = () => {
               {!result && !isAnalyzing && (
                 <button
                   onClick={() => runTrafficSignOCR()}
-                  className="mt-6 px-8 py-3 bg-indigo-600 hover:bg-indigo-500 shadow-sm text-white font-bold text-xs tracking-wider rounded-xl transition-all animate-bounce"
+                  className="cursor-pointer mt-6 px-8 py-3 bg-indigo-600 hover:bg-indigo-500 shadow-sm text-white font-bold text-xs tracking-wider rounded-xl transition-all animate-bounce"
                 >
                   RUN GEMINI AI ANALYSIS
                 </button>
@@ -337,7 +337,7 @@ export const Scanner: React.FC = () => {
                   runTrafficSignOCR(demo.id);
                 }}
                 disabled={isAnalyzing}
-                className="flex items-center cursor-pointer gap-2.5 p-3 rounded-xl border border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-left transition-all text-xs font-semibold text-gray-600 bg-white shadow-3xs"
+                className="cursor-pointer flex items-center cursor-pointer gap-2.5 p-3 rounded-xl border border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-left transition-all text-xs font-semibold text-gray-600 bg-white shadow-3xs"
               >
                 <Sliders className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
                 <div>
@@ -450,7 +450,7 @@ export const Scanner: React.FC = () => {
                         
                         <button
                           onClick={() => speakWord(result.signFound, "en-US", "ocr_en")}
-                          className={`p-1.5 rounded-full transition-all ${
+                          className={`p-1.5 cursor-pointer rounded-full transition-all ${
                             speechActive === "ocr_en"
                               ? "bg-slate-200 text-slate-800 ring-2 ring-slate-300"
                               : "bg-slate-100 hover:bg-slate-200 text-slate-500"
@@ -500,7 +500,7 @@ export const Scanner: React.FC = () => {
                       </div>
                       <button
                         onClick={() => speakWord(result.khmerTranslation, "km-KH", "ocr_kh")}
-                        className={`p-2 rounded-full transition-all ${
+                        className={`p-2 cursor-pointer rounded-full transition-all ${
                           speechActive === "ocr_kh"
                             ? "bg-emerald-200 text-emerald-800 ring-2 ring-emerald-300"
                             : "bg-emerald-100/70 hover:bg-emerald-100 text-emerald-700"
