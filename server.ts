@@ -35,7 +35,7 @@ function getGeminiClient(): GoogleGenAI {
 
 async function startServer() {
   const app = express();
-  const PORT = 3001;
+  const PORT = process.env.PORT || 3001;
 
   // Use express json with standard base64 size limit
   app.use(express.json({ limit: "15mb" }));
