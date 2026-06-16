@@ -11,7 +11,8 @@
 *.BACKUP.*
 *.BASE.*
 # *.env_test
-# .env
+.env
+.env.local
 *.LOCAL.*
 *.REMOTE.*
 *_BACKUP_*.txt

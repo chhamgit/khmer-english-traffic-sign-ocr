@@ -24,6 +24,7 @@ import {
   Server
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import logo from "./../assets/logo.png"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<"scan" | "catalog" | "edu" | "sim">("scan");
@@ -52,10 +53,11 @@ export default function App() {
             
             {/* Visual Logo / Launcher */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-emerald-600 rounded-xl flex items-center justify-center text-white relative shadow-sm">
+              {/* <div className="w-9 h-9 bg-emerald-600 rounded-xl flex items-center justify-center text-white relative shadow-sm">
                 <BrainCircuit className="w-5 h-5 animate-pulse" />
                 <span className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-rose-500 rounded-full border-2 border-white" />
-              </div>
+              </div> */}
+              <img src={logo} alt="" srcset="" style={{width:"70px"}}/>
               <div>
                 <span className="font-mono text-[9px] font-black text-rose-500 block tracking-widest leading-none">
                   AI CORE ADAS
@@ -100,9 +102,9 @@ export default function App() {
               <span className="text-xxs px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold uppercase rounded-full tracking-widest font-mono">
                 Multimodal Image Recognition
               </span>
-              <span className="text-xxs px-2.5 py-1 bg-rose-500/10 border border-rose-500/20 text-rose-400 font-bold uppercase rounded-full tracking-widest font-mono">
+              {/* <span className="text-xxs px-2.5 py-1 bg-rose-500/10 border border-rose-500/20 text-rose-400 font-bold uppercase rounded-full tracking-widest font-mono">
                 Gemini 3.5-Flash
-              </span>
+              </span> */}
             </div>
             
             <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight">
@@ -142,7 +144,7 @@ export default function App() {
         <div id="dashboard_tab_rail" className="flex flex-wrap border-b border-gray-200">
           <button
             onClick={() => setActiveTab("scan")}
-            className={`flex items-center gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
+            className={`flex items-center cursor-pointer gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
               activeTab === "scan"
                 ? "border-emerald-600 text-slate-900"
                 : "border-transparent text-gray-500 hover:text-gray-700"
@@ -153,7 +155,7 @@ export default function App() {
 
           <button
             onClick={() => setActiveTab("catalog")}
-            className={`flex items-center gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
+            className={`flex items-center cursor-pointer gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
               activeTab === "catalog"
                 ? "border-emerald-600 text-slate-900"
                 : "border-transparent text-gray-500 hover:text-gray-700"
@@ -164,7 +166,7 @@ export default function App() {
 
           <button
             onClick={() => setActiveTab("edu")}
-            className={`flex items-center gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
+            className={`flex items-center cursor-pointer gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
               activeTab === "edu"
                 ? "border-emerald-600 text-slate-900"
                 : "border-transparent text-gray-500 hover:text-gray-700"
@@ -175,7 +177,7 @@ export default function App() {
 
           <button
             onClick={() => setActiveTab("sim")}
-            className={`flex items-center gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
+            className={`flex items-center cursor-pointer gap-2 px-5 py-3.5 border-b-2 font-bold text-xs tracking-wider transition-all uppercase font-mono ${
               activeTab === "sim"
                 ? "border-emerald-600 text-slate-900"
                 : "border-transparent text-gray-500 hover:text-gray-700"

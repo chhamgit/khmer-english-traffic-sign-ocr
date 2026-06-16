@@ -93,7 +93,7 @@ export const Catalog: React.FC = () => {
                 key={cat}
                 id={`cat_tab_btn_${cat}`}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold tracking-wide transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs cursor-pointer font-semibold tracking-wide transition-all ${
                   selectedCategory === cat
                     ? "bg-slate-900 text-white shadow-xs"
                     : "bg-gray-100 hover:bg-gray-200 text-gray-600"

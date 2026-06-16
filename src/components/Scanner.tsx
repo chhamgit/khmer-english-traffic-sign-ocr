@@ -337,7 +337,7 @@ export const Scanner: React.FC = () => {
                   runTrafficSignOCR(demo.id);
                 }}
                 disabled={isAnalyzing}
-                className="flex items-center gap-2.5 p-3 rounded-xl border border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-left transition-all text-xs font-semibold text-gray-600 bg-white shadow-3xs"
+                className="flex items-center cursor-pointer gap-2.5 p-3 rounded-xl border border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-left transition-all text-xs font-semibold text-gray-600 bg-white shadow-3xs"
               >
                 <Sliders className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
                 <div>

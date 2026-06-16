@@ -193,7 +193,7 @@ export const Simulation: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
-                className={`flex items-center gap-1.5 px-4 y-2 py-2 rounded-xl text-xs font-bold font-mono tracking-wider transition-all ${
+                className={`flex items-center cursor-pointer gap-1.5 px-4 y-2 py-2 rounded-xl text-xs font-bold font-mono tracking-wider transition-all ${
                   isPlaying
                     ? "bg-slate-800 text-slate-300 hover:bg-slate-700"
                     : "bg-emerald-600 text-white hover:bg-emerald-500"
@@ -212,7 +212,7 @@ export const Simulation: React.FC = () => {
 
               <button
                 onClick={goToNextScene}
-                className="p-2 bg-slate-900 hover:bg-slate-800 text-slate-400 rounded-xl border border-slate-800"
+                className="p-2 bg-slate-900 cursor-pointer hover:bg-slate-800 text-slate-400 rounded-xl border border-slate-800"
                 title="Skip Scene"
               >
                 <FastForward className="w-4 h-4" />
