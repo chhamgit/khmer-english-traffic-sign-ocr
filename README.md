@@ -1,2 +1,20 @@
-# khmer-english-traffic-sign-ocr
-AI-powered Khmer-English Traffic Sign OCR and Translation System. Detects traffic signs, extracts Khmer and English text, provides bilingual translations, voice guidance, and real-time ADAS simulation. Built with React, TypeScript, Express, OCR, and multimodal AI for road safety and driver education.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/42c0ae41-d074-448d-908f-cbf34dc61412
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

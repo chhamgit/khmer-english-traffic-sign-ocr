@@ -1,0 +1,6 @@
+{
+  "name": "Traffic Symbol OCR",
+  "description": "OCR and recognition application for reading, translating, and understanding traffic symbols in Khmer and English, with interactive education, real-time camera simulation, and TTS pronunciation support.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
